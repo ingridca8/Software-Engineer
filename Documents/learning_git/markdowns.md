@@ -1,19 +1,19 @@
-#Markdowns
+# Markdowns
 
 For headings
 
-#Title 1
-##Title 2
-###Title 3
-####Title 4
-#####Title 5
-######Title 6
+# Title 1
+## Title 2
+### Title 3
+#### Title 4
+##### Title 5
+###### Title 6
 
 For Unordered lists
 
-*item 
-+item
--item
+* item 
++ item
+- item
 (*,+,-)
 
 For ordered lists
@@ -30,7 +30,7 @@ To emphasize
 
 For quotes
 
->Start of quote block
+>Start of quote block /n
 >c
 >on
 >tinu
@@ -41,7 +41,7 @@ For quotes
 
 text-to HTML conversion tool for web writers
 
-+Plain text formating syntax
-+software tool
++ Plain text formating syntax
++ software tool
 
 
