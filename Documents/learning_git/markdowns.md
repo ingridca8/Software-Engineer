@@ -30,7 +30,7 @@ To emphasize
 
 For quotes
 
->Start of quote block /n
+>Start of quote block ***
 >c
 >on
 >tinu
