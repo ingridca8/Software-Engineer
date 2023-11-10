@@ -5,9 +5,9 @@ Since the nodes use links to denote the next node in the sequence, the nodes are
 
 Common operations on a linked list may include:
 
-    adding nodes
-    removing nodes
-    finding a node
-    traversing (or traveling through) the linked list
+    +adding nodes
+    +removing nodes
+    +finding a node
+    +traversing (or traveling through) the linked list
 
 Linked lists typically contain unidirectional links (next node), but some implementations make use of bidirectional links (next and previous nodes).
