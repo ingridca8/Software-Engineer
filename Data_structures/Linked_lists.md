@@ -11,3 +11,15 @@ Common operations on a linked list may include:
     + traversing (or traveling through) the linked list
 
 Linked lists typically contain unidirectional links (next node), but some implementations make use of bidirectional links (next and previous nodes).
+
+With linked lists, nodes are linked to from only one other node.
+## Add nodes
+Adding a new node to the beginning of the list requires you to link your new node to the current head node. This way, you maintain your connection with the following nodes in the list.
+## Remove nodes
+If you accidentally remove the single link to a node, that node’s data and any following nodes could be lost to your application, leaving you with orphaned nodes.
+
+To properly maintain the list when removing a node from the middle of a linked list, you need to be sure to adjust the link on the previous node so that it points to the following node.
+
+Depending on the language, nodes which are not referenced are removed automatically. “Removing” a node is equivalent to removing all references to the node.
+
+
