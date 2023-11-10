@@ -22,5 +22,16 @@ If you accidentally remove the single link to a node, that node’s data and any
 To properly maintain the list when removing a node from the middle of a linked list, you need to be sure to adjust the link on the previous node so that it points to the following node.
 
 Depending on the language, nodes which are not referenced are removed automatically. “Removing” a node is equivalent to removing all references to the node.
+## Nodes in python
+each linked list is a sequential chain of nodes. So before we start building out the LinkedList itself, we want to build up a Node class in Python that we can use to build our data containers.
+With the Node in hand, we can start building the actual linked list. Depending on the end-use of the linked list, a variety of methods can be defined.
+
+For our use, we want to be able to:
+
+    get the head node of the list (it’s like peeking at the first item in line)
+    add a new node to the beginning of the list
+    print out the list values in order
+    remove a node that has a particular value
+
 
 
