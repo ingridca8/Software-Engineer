@@ -9,9 +9,9 @@ If you inadvertently remove the single link to a node, that node’s data and an
 ## Nodes in python
 The node’s data will be specified when creating the node and immutable (can’t be updated). The link will be optional at initialization and can be updated.
 
-class Node():
-  def __init__(self, value, link_node=None):
-    self.value = value
-    self.link_node = link_node
+class Node():\
+  def __init__(self, value, link_node=None):\
+    self.value = value\
+    self.link_node = link_node\
 
   
