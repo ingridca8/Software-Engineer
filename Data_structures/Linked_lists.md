@@ -15,6 +15,7 @@ Linked lists typically contain unidirectional links (next node), but some implem
 With linked lists, nodes are linked to from only one other node.
 ## Add nodes
 Adding a new node to the beginning of the list requires you to link your new node to the current head node. This way, you maintain your connection with the following nodes in the list.
+By knowing which one is your head by all time you can add nodes to your list at any position.
 ## Remove nodes
 If you accidentally remove the single link to a node, that node’s data and any following nodes could be lost to your application, leaving you with orphaned nodes.
 
