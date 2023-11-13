@@ -13,4 +13,5 @@ Overall, these directories with files containing notes about software engineer l
 
 ## Resources
 https://www.codecademy.com/learn
+
 https://realpython.com/python-namespaces-scope/
