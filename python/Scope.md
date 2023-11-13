@@ -13,10 +13,10 @@ Note: As we explore the ideas around scope, there may be some confusion between 
 ## Local scope
 Whenever we decide to call a function, a new local scope will be generated. Each subsequent function call will generate a new local scope. Since the local scope is the deepest level of the four scopes, names in a local scope cannot be accessed or modified by any code called in outer scopes. As a rule of thumb, any names created in a local namespace are usually also locally scoped. 
 
-def favorite_color(): 
-  color = 'Red'
+>> def favorite_color(): 
+>>  color = 'Red'
 
-print(color) 
+>> print(color) 
 
 In this case, the name of color is scoped locally to the function favorite_color(). Since the statement print(color) is called outside of the function, it has no access to the local scope (and thus the local namespace) inside of favorite_color() and returns an error. 
 
@@ -33,36 +33,36 @@ We can access names from the enclosing scope with nested functions, but we canno
 
 Given the following enclosing and nested function, there is a variable defined in the enclosing scope, which is not modifiable from within the nested function.
 
-def enclosing_function():
-  var = "value"
+>>def enclosing_function():
+>>  var = "value"
 
-  def nested_function():
-    var = "new_value"
+>>  def nested_function():
+>>    var = "new_value"
 
-  nested_function()
+>>  nested_function()
 
-  print(var)
+>>  print(var)
 
-enclosing_function()
+>>enclosing_function()
 
 The output would be:
 
-value
+>> value
 
 as the value of var was not modified by the nested function. After using the **nonlocal** statement, the variable is now modifiable from the local scope.
 
-def enclosing_function():
-  var = "value"
+>>def enclosing_function():
+>>  var = "value"
 
-  def nested_function():
-    **nonlocal** var
-    var = "new_value"
+>>  def nested_function():
+>>    **nonlocal** var
+>>    var = "new_value"
 
-  nested_function()
-  print(var)
+>>  nested_function()
+>>  print(var)
 
-enclosing_function()
+>>enclosing_function()
 
 The output would now be:
 
-new_value
+>>new_value
