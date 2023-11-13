@@ -21,4 +21,13 @@ Let’s note a few interesting facts about the objects hosted built-in namespace
     There are even constants like True and False
 
 ## Global Namespace
+The global namespace exists one level below the built-in namespace. Generally, it includes all non-nested names in the module (file) we are choosing to run the Python interpreter on. The global namespace is created when we run our main program and has a lifetime until the interpreter terminates (usually when our program is finished running).
+Thankfully, in order to see what objects exist in the global namespace, Python provides the globals() built-in function. 
+The global namespace contains all of the non-nested objects of our program.
+Anytime we use the import statement to bring in a new module into our program, instead of adding every name from that module to our current global namespace, Python will create a new namespace for it. This means there might be potentially multiple global namespaces in a single program.
+
+## Local Namespaces
+In Python, whenever the interpreter executes a function, it will generate a local namespace for that specific function. This namespace only exists inside of the function and remains in existence until the function terminates.
+
+Similar to how we can see the global namespace using a built-in function called globals(), Python provides a function called locals() to see any generated local namespace.
 
