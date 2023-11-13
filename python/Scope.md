@@ -61,6 +61,11 @@ as the value of var was not modified by the nested function. After using the **n
 >>  nested_function()
 >>  print(var)
 
+## Global scope
+At the highest level of access, we have the global scope. Names defined in the global namespace will automatically be globally scoped and can be accessed anywhere in our program. 
+
+However, similar to local scope, values can only be accessed but not modified.
+
 >>enclosing_function()
 
 The output would now be:
