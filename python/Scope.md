@@ -71,3 +71,38 @@ However, similar to local scope, values can only be accessed but not modified.
 The output would now be:
 
 >>new_value
+
+## Modifying Scope Behavior: global Statement
+Sometimes, we want to modify a global name from within a local scope.
+
+Similar to the nonlocal statement, Python provides the **global** statement to allow the modification of global names from a local scope.
+
+>>global_var = 10
+>>
+>>def some_function():
+>>  **global** global_var
+>>  global_var = 20
+>>
+>>some_function()
+>>
+>>print(global_var)
+
+The output would now be:
+
+>>20
+
+In addition, the global statement can be used even if the name has not been defined in the global namespace. Using the global statement would create the new variable in the global namespace.
+
+>>def some_function():
+>>  **global** x
+>>  x = 30
+>>
+>>some_function()
+>>print(x)
+
+This would output:
+
+>>30
+
+In summary, the global keyword is used within a local scope to associate a variable name with a name in the global namespace. This association is only valid within the local scope when global is used.
+
