@@ -2,7 +2,7 @@
 ## What are namespaces
 A namespace is a collection of currently defined symbolic names along with information about the object that each name references. You can think of a namespace as a dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.
 
-![]([https://assets.digitalocean.com/articles/alligator/boo.svg](https://static-assets.codecademy.com/Courses/Intermediate-Python/Types-of-Namespaces_final.svg) "Namespaces")
+![alt text]([https://assets.digitalocean.com/articles/alligator/boo.svg](https://static-assets.codecademy.com/Courses/Intermediate-Python/Types-of-Namespaces_final.svg) "Namespaces")
 
 As Tim Peters suggests, namespaces aren’t just great. They’re honking great, and Python uses them extensively. In a Python program, there are four types of namespaces:
 
