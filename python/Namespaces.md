@@ -19,3 +19,6 @@ Let’s note a few interesting facts about the objects hosted built-in namespace
     It contains many of the built-in functions we are able to use in our Python programs such as str(), zip(), slice(), sorted(), and many more.
     It also hosts many of the exceptions that we may encounter in our programs such as 'ArithmeticError', 'IndexError', 'KeyError', and many more.
     There are even constants like True and False
+
+## Global Namespace
+
