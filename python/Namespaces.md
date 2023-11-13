@@ -12,7 +12,7 @@ These have differing lifetimes. As Python executes a program, it creates namespa
 ## Built in Namespaces
 The built-in namespace contains the names of all of Python’s built-in objects. These are available at all times when Python is running. You can list the objects in the built-in namespace with the following command:
 
- dir(_ _builtins_ _)
+ dir(__ builtins __)
 
 Let’s note a few interesting facts about the objects hosted built-in namespace:
 
