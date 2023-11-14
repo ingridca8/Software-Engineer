@@ -15,3 +15,9 @@ Overall, these directories with files containing notes about software engineer l
 https://www.codecademy.com/learn
 
 https://realpython.com/python-namespaces-scope/
+
+https://users.cs.utah.edu/~germain/PPS/Topics/structures.html
+
+https://www.geeksforgeeks.org/python-variables/
+
+https://www.edureka.co/blog/data-structures-in-python/
