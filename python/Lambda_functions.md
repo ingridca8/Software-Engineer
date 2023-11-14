@@ -1,6 +1,7 @@
 In Python, a lambda function (also commonly called an anonymous function) is a one-line shorthand for function. 
 
 >> def add_two(my_input):
+>> 
 >>   return my_input + 2
 
 The same function could be written as a lambda function:
