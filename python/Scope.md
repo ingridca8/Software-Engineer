@@ -106,3 +106,29 @@ This would output:
 
 In summary, the global keyword is used within a local scope to associate a variable name with a name in the global namespace. This association is only valid within the local scope when global is used.
 
+## Scope Resolution: The LEGB Rule
+While most of our focus so far has been around where we can access namespaces, to truly get a full picture of scoping rules, we must also examine how Python handles scope resolution.
+
+Scope resolution is a term used to describe a search procedure for a name in the various namespaces. A set of rules dictates the order that the search needs to follow.
+
+In Python, the unofficial rule (often referred to in literature but does not exist in the official documentation) is known as the LEGB rule.
+
+LEGB stands for Local, Enclosing, Global, and Built-in. These four letters represent the order of namespaces Python will check to see if a name exists.
+
+This process of scope resolution is crucial to understanding how programs are able to access names in different scopes. Keep in mind the order that Python searches always start at the lowest level (the local level) and always flows upward to the higher scopes.
+
+The second scenario to examine is seeing what happens when we have two of the same name in different namespaces. 
+
+>>age = 27 
+>>
+>>def func(): 
+>>  age = 42
+>>
+>>  def inner_func():
+>>    print(age)
+>>  
+>>  inner_func() 
+>>
+>>func()
+
+Here the output will be 42 because Python could find a name (age) in the enclosing scope and did not continue to search for the value up into the global scope. If Python cannot find a name in any of the four scopes it searches, it will return a NameError exception. 
