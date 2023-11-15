@@ -18,18 +18,18 @@ Higher-order functions operate on other functions via arguments or via return va
 ## Functions as arguments
 Take a look at the example higher-order function called total_bill():
 
-def total_bill(func, value):
-  total = func(value)
-  return total
+>>> def total_bill(func, value):
+>>>   total = func(value)
+>>>   return total
 
 The total_bill() function takes two arguments: func and value. When called, total_bill() applies func() to value and returns the result. In order to see it in action, let’s define a function called, add_tax(), and then pass it to our higher-order total_bill() function along with a numeric value:
 
-def add_tax(total):
-  tax = total * 0.06
-  new_total = total + tax
-  return new_total
- 
-total_bill(add_tax, 100)
+>>> def add_tax(total):
+>>>   tax = total * 0.06
+>>>   new_total = total + tax
+>>>   return new_total
+>>>  
+>>> total_bill(add_tax, 100)
 
 Here, total_bill() is classified as a higher-order function because it takes in an argument that is a function (add_tax() in the above example). 
 
