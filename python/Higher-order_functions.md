@@ -146,5 +146,36 @@ Would output:
      'Total amount owed is $144.00. Thank you! :)',
      'Total amount owed is $50.40. Thank you! :)']
 
-As these examples show, being able to pass functions in as arguments can be pretty handy, especially when we want to apply a function multiple times. In fact, it’s so handy that there’s a built-in higher-order function in Python that does just that—the map() function. We will learn more about the map() function in upcoming articles.
+As these examples show, being able to pass functions in as arguments can be pretty handy, especially when we want to apply a function multiple times. In fact, it’s so handy that there’s a built-in higher-order function in Python that does just that—the map() function. 
 
+## Functions as Return Values
+
+So far, we have focused on higher-order functions that take another function as an argument. Remember, though, that a function that returns another function is also a higher-order function. Let’s see what this looks like in practice by considering a higher-order function, make_box_volume_function(), that will help us calculate the volumes of boxes when they have the same height:
+
+    def make_box_volume_function(height):
+        # defines and returns a function that takes two numeric arguments,        
+        # length &  width, and returns the volume given the input height
+        def volume(length, width):
+            return length*width*height
+    
+        return volume
+ 
+    box_volume_height15 = make_box_volume_function(15)
+ 
+    print(box_volume_height15(3,2))
+
+Would output:
+
+    90
+
+And if we had slightly shorter boxes:
+
+    box_volume_height10 = make_box_volume_function(10)
+     
+    print(box_volume_height10(3,2))
+
+Would output:
+
+    60
+
+In the example, we wrote a higher-order function, make_box_volume_function(), that takes a height as an argument and returns a new function that calculates the volume of any box with that height when it is passed the length and width of the box. As we can see, higher-order functions with functions as return values are just as reusable as higher-order functions with functions as arguments and, therefore, also reduce repetition and the chances for mistakes to creep into code.
