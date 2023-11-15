@@ -19,17 +19,25 @@ Higher-order functions operate on other functions via arguments or via return va
 Take a look at the example higher-order function called total_bill():
 
 >>> def total_bill(func, value):
+>>> 
 >>>   total = func(value)
+>>> 
 >>>   return total
+>>> 
 
 The total_bill() function takes two arguments: func and value. When called, total_bill() applies func() to value and returns the result. In order to see it in action, let’s define a function called, add_tax(), and then pass it to our higher-order total_bill() function along with a numeric value:
 
 >>> def add_tax(total):
+>>> 
 >>>   tax = total * 0.06
+>>> 
 >>>   new_total = total + tax
+>>> 
 >>>   return new_total
+>>> 
 >>>  
 >>> total_bill(add_tax, 100)
+>>> 
 
 Here, total_bill() is classified as a higher-order function because it takes in an argument that is a function (add_tax() in the above example). 
 
@@ -40,44 +48,60 @@ Wrapper function or decorator allows us to wrap another function in order to ext
 
 Below is the example of a simple decorator.
 
-# defining a decorator  
-def hello_decorator(func):  
-    
-    # inner1 is a Wrapper function in   
-    # which the argument is called  
-        
-    # inner function can access the outer local  
-    # functions like in this case "func"  
-    def inner1():  
-        print("Hello, this is before function execution")  
-    
-        # calling the actual function now  
-        # inside the wrapper function.  
-        func()  
-    
-        print("This is after function execution")  
-            
-    return inner1  
-    
-    
-# defining a function, to be called inside wrapper  
-def function_to_be_used():  
-    print("This is inside the function !!")  
-    
-    
-# passing 'function_to_be_used' inside the  
-# decorator to control its behavior  
-function_to_be_used = hello_decorator(function_to_be_used)  
-    
-    
-# calling the function  
-function_to_be_used()  
-
+>>> def hello_decorator(func):  
+>>>     
+>>>     # inner1 is a Wrapper function in
+>>> 
+>>>     # which the argument is called
+>>> 
+>>>         
+>>>     # inner function can access the outer local
+>>> 
+>>>     # functions like in this case "func"
+>>> 
+>>>     def inner1():
+>>> 
+>>>         print("Hello, this is before function execution")
+>>>
+>>>     
+>>>         # calling the actual function now
+>>> 
+>>>         # inside the wrapper function.
+>>> 
+>>>         func()  
+>>>     
+>>>         print("This is after function execution")  
+>>>             
+>>>     return inner1  
+>>>     
+>>>     
+>>> # defining a function, to be called inside wrapper
+>>> 
+>>> def function_to_be_used():
+>>> 
+>>>     print("This is inside the function !!")
+>>> 
+>>>     
+>>>     
+>>> # passing 'function_to_be_used' inside the
+>>> 
+>>> # decorator to control its behavior
+>>> 
+>>> function_to_be_used = hello_decorator(function_to_be_used)  
+>>>     
+>>>     
+>>> # calling the function
+>>> 
+>>> function_to_be_used()  
+>>> 
 Output:
 
-Hello, this is before function execution
-This is inside the function !!
-This is after function execution
+>>> Hello, this is before function execution
+>>> 
+>>> This is inside the function !!
+>>> 
+>>> This is after function execution
+>>> 
 
 ## Functions as Arguments - Iteration
 
