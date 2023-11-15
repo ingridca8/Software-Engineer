@@ -172,3 +172,53 @@ Similar to map(), the filter() function takes a function and an iterable as argu
 
 The filter() function accomplishes this goal by applying a passed filtering function to each element in the passed iterable. The filtering function should be a function that returns a boolean value: True or False. The returned filter object will hold only those elements of the passed iterable for which the filtering function returned True. 
 
+Let’s see what this looks like in practice with a function that filters a collection of names and returns only the names that start with the letter M or m:
+
+    names = ["margarita", "Linda", "Masako", "Maki", "Angela"]
+     
+    M_names = filter(lambda name: name[0] == "M" or name[0] == "m", names) 
+     
+    print(list(M_names))
+
+This would output:
+
+    ['margarita', 'Masako', 'Maki']
+
+In this example:
+
+1. filter() takes two parameters: the lambda filtering function and the list, names.
+2. The filter() function then iterates through names and applies the lambda function to each item in the list.
+3. For each item in the list, if the condition in the lambda function evaluates to True, the item is added to a filter object.
+4. The filter object is returned and when converted to a list and printed, we saw that it contained [‘margarita’, ‘Masako’, ‘Maki’]—only M-names!
+
+## Reduce
+
+Lastly, we have the reduce() function, which has two distinct differences from the built-in higher-order functions that we have learned so far.
+
+1. In contrast to the map() and filter() functions that are always available, the reduce() function must be imported from the functools module to use it.
+2. Rather than returning a reduce object as might be expected after learning about map() and filter(), reduce() returns a single value. To get to this single value, reduce() cumulatively applies a passed function to each sequential pair of elements in an iterable.
+
+Let’s see what this looks like in practice by using reduce() to multiply together all the values in a list:
+
+    from functools import reduce
+     
+    int_list = [3, 6, 9, 12]
+     
+    reduced_int_list = reduce(lambda x,y: x*y, int_list)
+     
+    print(reduced_int_list)
+
+This would output:
+
+    1944
+
+In this example:
+
++ The reduce() function takes 2 arguments: a lambda function and a list of integers.
++ The lambda function takes 2 numbers, x and y and multiplies them together.
++ The reduce() function applies the lambda function to the first two elements in the list, 3 and 6, to get a product of 18.
++ Next, 18 was multiplied by the following element in the list, 9, to get 162.
++ Continuing on, 162 was multiplied by the next element, 12, to get 1944.
++ This last, final value—1944—is what was returned by reduce().
+
+This process was essentially the same as multiplying 3*6*9*12.
