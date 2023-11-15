@@ -101,4 +101,50 @@ Output:
 >>> 
 
 ## Functions as Arguments - Iteration
+Let’s return to our total_bill() example. Now say we have a list of bills instead of just one, and we want to add tax or tip to each bill, depending on the type of sale it is.
+
+One way to accomplish this could be to write out separate loops: one for sales that need to have tax added and one for sales that should have a tip added.
+
+Now, we could write out another loop for when we need to add a tip instead of tax, but we can probably guess how many repetitions would be involved. A much more powerful solution would be to use a higher-order function to apply add_tax() or add_tip() to each balance in our list. Lets first define a higher-order function, total_bills(), that takes a function and a list as arguments, applies the function to each element in the list, standardizes the format of the result and adds a friendly message, appends the output to a new list, and finally returns the updated new list.
+
+    def total_bills(func, list):
+      #This list will store all the new bill values
+      new_bills = []
+
+      #This loop will iterate through our bills
+      for i in range(len(list)):
+
+        # Here we apply the function to each element of the list!
+        total = func(list[i])
+        new_bills.append("Total amount owed is $" + "{:.2f}".format(total) + ". Thank you! :)")
+
+      return new_bills
+
+Next, let’s use the add_tax() function that we wrote before with our new total_bills() higher-order function:
+
+    bills = [115, 120, 42]
+ 
+    bills_w_tax = total_bills(add_tax, bills)
+ 
+    print(bills_w_tax)
+
+Would output:
+
+    ['Total amount owed is $121.90. Thank you! :)',
+     'Total amount owed is $127.20. Thank you! :)',
+     'Total amount owed is $44.52. Thank you! :)']
+
+And if we needed to add a tip instead of tax, we could simply swap out the function argument:
+
+    bills_w_tip = total_bills(add_tip, bills)
+ 
+    print(bills_w_tip)
+
+Would output:
+
+    ['Total amount owed is $138.00. Thank you! :)',
+     'Total amount owed is $144.00. Thank you! :)',
+     'Total amount owed is $50.40. Thank you! :)']
+
+As these examples show, being able to pass functions in as arguments can be pretty handy, especially when we want to apply a function multiple times. In fact, it’s so handy that there’s a built-in higher-order function in Python that does just that—the map() function. We will learn more about the map() function in upcoming articles.
 
