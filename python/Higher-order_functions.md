@@ -75,7 +75,7 @@ Below is the example of a simple decorator.
 >>>     return inner1  
 >>>     
 >>>     
->>> # defining a function, to be called inside wrapper
+>>> 
 >>> 
 >>> def function_to_be_used():
 >>> 
@@ -83,14 +83,11 @@ Below is the example of a simple decorator.
 >>> 
 >>>     
 >>>     
->>> # passing 'function_to_be_used' inside the
->>> 
->>> # decorator to control its behavior
 >>> 
 >>> function_to_be_used = hello_decorator(function_to_be_used)  
 >>>     
 >>>     
->>> # calling the function
+>>> 
 >>> 
 >>> function_to_be_used()  
 >>> 
