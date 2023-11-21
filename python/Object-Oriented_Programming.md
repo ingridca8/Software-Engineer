@@ -74,7 +74,7 @@ Inheritance allows a class to inherit the features of other classes. The origina
 Inheritance is often used to create generic parent classes and child classes that have more specific functionality.
 
 **Note** This is posible 'cause when you create a child class, you can only add or extend tha father class, never reduce it.
-For example, if we create a car() class, wich has methods to turn on the car, drive it, stop it. Then we can create a child class for sport cars wich can do all the same as the car class but also has a turbo method. 
+For example, if we create a car() class, wich has methods to turn on the car, drive it, stop it. Then we can create a child class for sport cars wich can do all the same as the car class but also has a turbo method. Also this alows any child class work in wherever a father class can works.
 
 Reusability is the main benefit here. We know sometimes that multiple places need to do the same thing, and they need to do everything the same except for one small part. This is a problem inheritance can solve.
 
