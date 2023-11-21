@@ -80,7 +80,7 @@ In general
 
 Example
 
-    class Animal: 
+    class Animal:  
       def eat(self): 
         print("Nom Nom Nom...eating food!")
 
