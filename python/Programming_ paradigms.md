@@ -19,7 +19,7 @@ A great example of procedures would be the well known for loop. The for loop's m
 
 Languages that support the procedural programming paradigm are:
 
-  + C
+  +  C
   +  C++
   +  Java
   +  ColdFusion
@@ -45,12 +45,50 @@ A class is a template or blueprint from which objects are created.
 
 Objects are instances of classes. Objects have attributes/states and methods/behaviors. Attributes are data associated with the object while methods are actions/functions that the object can perform.
 
+Languages that support the object-oriented paradigm:
+
+   + Python
+   + Ruby
+   + Java
+   + C++
+   + Smalltalk
+
+Object-oriented programming is best used when:
+
+  + You have multiple programmers who don’t need to understand each component (Holligan, 2016).
+  + There is a lot of code that could be shared and reused (Holligan, 2016).
+  + The project is anticipated to change often and be added to over time (Holligan, 2016).
+    
 ### Parallel processing aproach
 
+Parallel processing is the processing of program instructions by dividing them among multiple processors.
+
+A parallel processing system allows many processors to run a program in less time by dividing them up.
+
+Languages that support the Parallel processing approach:
+
+  + NESL (one of the oldest ones)
+  + C
+  + C++
+
+Parallel processing approach is often the best use when:
+
+  + You have a system that has more than one CPU or multi-core processors which are commonly found on computers today.
+  + You need to solve some computational problems that take hours/days to solve even with the benefit of a more powerful microprocessor.
+  + You work with real-world data that needs more dynamic simulation and modeling.
 
 ## Declarative programming paradigms
 
+Declarative programming is a style of building programs that expresses the logic of a computation without talking about its control flow.
+
+Declarative programming is a programming paradigm in which the programmer defines what needs to be accomplished by the program without defining how it needs to be implemented. In other words, the approach focuses on what needs to be achieved instead of instructing how to achieve it.
+
+Imagine the president during the state of the union declaring their intentions for what they want to happen. On the other hand, imperative programming would be like a manager of a McDonald's franchise. They are very imperative and as a result, this makes everything important. They, therefore, tell everyone how to do everything down to the simplest of actions.
+
+So the main differences are that imperative tells you how to do something and declarative tells you what to do. 
+
 ### Logic programming paradigm
+
 ### functional programming
 ### Database processing aproach
 
