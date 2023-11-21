@@ -24,8 +24,16 @@ Languages that support the procedural programming paradigm are:
   +  Java
   +  ColdFusion
   +  Pascal
-    
+
+Procedural programming is often the best choice when:
+
+  + There is a complex operation which includes dependencies between operations, and when there is a need for clear visibility of the different application states ('SQL loading', 'SQL loaded', 'Network online', 'No audio hardware', etc). This is usually appropriate for application startup and shutdown (Holligan, 2016).
+  + The program is very unique and few elements were shared (Holligan, 2016).
+  + The program is static and not expected to change much over time (Holligan, 2016).
+  + None or only a few features are expected to be added to the project over time (Holligan, 2016).
+
 ### Object-Oriented programming
+
 ### Parallel processing aproach
 
 ## Declarative programming paradigms
