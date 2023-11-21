@@ -107,7 +107,7 @@ Logic programming paradigm is often the best use when:
 
   + If you're planning to work on projects like theorem proving, expert systems, term rewriting, type systems and automated planning.
     
-### functional programming
+### Functional programming
 
 The functional programming paradigm has been in the limelight for a while now because of JavaScript, a functional programming language that has gained more popularity recently.
 
