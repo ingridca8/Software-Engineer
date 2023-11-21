@@ -89,6 +89,62 @@ So the main differences are that imperative tells you how to do something and de
 
 ### Logic programming paradigm
 
+The logic programming paradigm takes a declarative approach to problem-solving. It's based on formal logic.
+
+The logic programming paradigm isn't made up of instructions - rather it's made up of facts and clauses. It uses everything it knows and tries to come up with the world where all of those facts and clauses are true.
+
+For instance, Socrates is a man, all men are mortal, and therefore Socrates is mortal. 
+
+Languages that support the logic programming paradigm:
+
+  + Prolog
+  + Absys
+  + ALF (algebraic logic functional programming language)
+  + Alice
+  + Ciao
+
+Logic programming paradigm is often the best use when:
+
+  + If you're planning to work on projects like theorem proving, expert systems, term rewriting, type systems and automated planning.
+    
 ### functional programming
+
+The functional programming paradigm has been in the limelight for a while now because of JavaScript, a functional programming language that has gained more popularity recently.
+
+The functional programming paradigm has its roots in mathematics and it is language independent. The key principle of this paradigm is the execution of a series of mathematical functions.
+
+You compose your program of short functions. All code is within a function. All variables are scoped to the function.
+
+In the functional programming paradigm, the functions do not modify any values outside the scope of that function and the functions themselves are not affected by any values outside their scope.
+
+Languages that support functional programming paradigm:
+
+  +  Haskell
+  +  OCaml
+  +  Scala
+  +  Clojure
+  +  Racket
+  +  JavaScript
+
+Functional programming paradigm is often best used when:
+
+  +  Working with mathematical computations.
+  +  Working with applications aimed at concurrency or parallelism.
+
 ### Database processing aproach
 
+This programming methodology is based on data and its movement. Program statements are defined by data rather than hard-coding a series of steps.
+
+A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS) ("What is a Database", Oracle, 2019).
+
+To process the data and querying them, databases use tables. Data can then be easily accessed, managed, modified, updated, controlled and organized.
+
+A good database processing approach is crucial to any company or organization. This is because the database stores all the pertinent details about the company such as employee records, transaction records and salary details.
+
+Most databases use **Structured Query Language (SQL)** for writing and querying data.
+
+Database processing approach is often best used when:
+
+  + Working with databases to structure them.
+  + Accessing, modifying, updating data on the database.
+  + Communicating with servers.
