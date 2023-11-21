@@ -68,35 +68,3 @@ Inheritance chain is the term used to describe the flow of inheritance from the 
 
 Do your best to keep your inheritance chains clean and sensible. You can easily end up coding an anti-patterns when using Inheritance (called the Fragile base anti-pattern). This happens where your base prototypes are considered "fragile" because you make a "safe" change to the base object and then start to break all your children. 
 
-#### Implementation
-
-In general
-
-    class ParentClass:
-      #class methods/properties...
-    
-    class ChildClass(ParentClass):
-      #class methods/properties...
-
-Example
-
-    class Animal:  
-      def eat(self): 
-        print("Nom Nom Nom...eating food!")
-
-    class Dog(Animal):
-      def bark(self):
-        print('Bark!')
-
-    class Cat(Animal):
-     def meow(self):
-       print('Meow!')   
-
-We will get
-
-    fluffy = Dog()
-    zoomie = Cat()
-    
-    fluffy.eat() # Nom Nom Nom...eating food!
-    zoomie.eat() # Nom Nom Nom...eating food!
-
