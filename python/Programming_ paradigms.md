@@ -34,7 +34,19 @@ Procedural programming is often the best choice when:
 
 ### Object-Oriented programming
 
+OOP is the most popular programming paradigm because of its unique advantages like the modularity of the code and the ability to directly associate real-world business problems in terms of code.
+
+    Object-oriented programming offers a sustainable way to write spaghetti code. It lets you accrete programs as a series of patches.
+    ― Paul Graham
+
+The key characteristics of object-oriented programming include Class, Abstraction, Encapsulation, Inheritance and Polymorphism.
+
+A class is a template or blueprint from which objects are created.
+
+Objects are instances of classes. Objects have attributes/states and methods/behaviors. Attributes are data associated with the object while methods are actions/functions that the object can perform.
+
 ### Parallel processing aproach
+
 
 ## Declarative programming paradigms
 
