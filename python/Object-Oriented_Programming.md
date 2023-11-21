@@ -41,8 +41,32 @@ Encapsulation requires that you define some attributes and methods as public or 
 
 Encapsulation also adds a layer of security by preventing attributes from being changed or methods from being executed by the outside world, which can cause unintended data corruption.
 
+The definition of encapsulation is "the action of enclosing something in or as if in a capsule". Removing access to parts of your code and making things private is exactly what Encapsulation is all about (often times, people refer to it as data hiding).
+
+Encapsulation means that each object in your code should control its own state. State is the current "snapshot" of your object. The keys, the methods on your object, Boolean properties and so on. If you were to reset a Boolean or delete a key from the object, they're all changes to your state.
+
+Limit what pieces of your code can access. Make more things inaccessible, if they aren't needed.
+
+Why should we prefer privacy? Why not just have everything global?
+
+   - Lots of unrelated bits of code will become dependent/coupled to one another via the global variable.
+   - You will likely override the variables if the name get's reused, which can lead to bugs or unpredictable behaviour.
+   - You will likely end up with Spaghetti Code – code that's hard to reason through and follow what is reading and writing to your variables and changing state.
+
 ### Abstraction
+
+Abstraction is a means for providing a higher-level interface for interacting with objects. It extends the encapsulation principle by making only key attributes visible to a user and hiding the remaining complexity. This suggests that the complexity of the actual object can be represented by a simple class with a limited number of methods you can execute or attributes you can access. 
+
+One way to imagine the concept of abstraction is to think about driving a car. To make the car turn right, you only have to turn the steering wheel right. The driver doesn’t have to know how the tires, rack and pinion, or power steering pump works — they just turn the wheel. Having to manage all of those other things while driving the car would cause chaos and a lot of accidents. 
+
+**Note** It is like the dark box example, you put something inside a dark box and it returs to you something else, it doesn't matter how. 
+
 ### Polymorphism
+
+Polymorphism means "the condition of occurring in several different forms." That's exactly what the fourth and final pillar is concerned with – types in the same inheritance chains being able to do different things.
+
+If you have used inheritance correctly you can now reliably use parents like their children. When two types share an inheritance chain, they can be used interchangeably with no errors or assertions in your code.
+
 ### Inheritance
 
 Inheritance allows a class to inherit the features of other classes. The original class is called the parent class, and the class inheriting the features is called the child class. Inheritance provides reusability. The child class can also add new attributes and methods. 
