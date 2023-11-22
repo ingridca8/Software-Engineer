@@ -107,3 +107,24 @@ The line Wolf.action(self) calls the Wolf class .action() method. The important 
 
 # Polymorphism
 
+In computer programming, polymorphism is the ability to apply an identical operation onto different types of objects. This can be useful when an object type may not be known at the program runtime. Polymorphism can be applied using Python in multiple ways. We have already experienced a form of it when exploring inheritance.
+
+class Animal:
+  def __init__(self, name):
+    self.name = name
+
+  def make_noise(self):
+    print("{} says, Grrrr".format(self.name))
+
+class Cat(Animal):
+
+  def make_noise(self):
+    print("{} says, Meow!".format(self.name))
+
+class Robot:
+  
+  def make_noise(self):
+    print("beep.boop...BEEEEP!!!")
+
+The example above shows an Animal class, its subclass Cat, and another standalone class Robot. Each class has a method .make_noise() with different outputs. The identical method name with different behaviors is a form of polymorphism.
+
