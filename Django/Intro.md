@@ -27,3 +27,47 @@ In order to have consistent ways of interacting with data, a back-end will often
 Let’s walk through the example of making an online purchase again, but this time, we’ll imagine how the application’s web API might be used. When a user presses the button to submit an order, that will trigger a request to send them to a different view of the website, an order confirmation page, but an additional request will be triggered from the front-end, unseen by the user, to the web API so that the database can be updated with the information from the order.
 
 Some web APIs are open to the public. Instagram, for example, has an API that other developers can use to access some of the data Instagram stores. Others are only used by the web application internally— Codecademy, for example, has a web API that employees use to accomplish internal tasks.
+
+## Authorization and Authentication
+
+Two other concepts we’ll want our server-side logic to handle are authentication and authorization.
+
+Authentication is the process of validating the identity of a user. One technique for authentication is to use logins with usernames and passwords. These credentials need to be securely stored in the back-end on a database and checked upon each visit. Web applications can also use external resources for authentication. You’ve likely logged into a website or application using your Facebook, Google, or Github credentials; that’s also an authentication process.
+
+Authorization controls which users have access to which resources and actions. Certain application views, like the page to edit a social media personal profile, are only accessible to that user. Other activities, like deleting a post, are often similarly restricted.
+
+When building a robust web application back-end, we need to incorporate both authentication (Who is this user? Are they who they claim to be?) and authorization (Who is allowed to do and see what?) into our server-side logic to make sure we’re creating secure, personalized, and dynamic content.
+
+
+## What is a Web Framework?
+
+Let’s first establish what it means when we say Django is a web framework.
+
+Web frameworks are a type of software development tool that makes it easier and faster to develop web applications. They are a type of code library that provides code and patterns for database access, as well as templating systems for content. They promote code reuse, so we don’t have to write as much code to get a project running. Some features most web frameworks include are:
+
+    URL routing
+    Input form management and validation
+    Templating engines for HTML and CSS
+    Database configuration
+    Web security
+    Session repository and retrieval
+
+Out of the box, Django comes with an admin panel, a user authentication system, a database, and something called object-relational mapper (ORM) that helps a web application interact with a database. These are some of the “batteries” included in Django to help build projects faster without having to worry about which tools to use.
+
+Later we’ll see how we can bootstrap a fully featured web application in only a handful of commands.
+
+## How Django Works
+
+Before we create our first Django web app, let’s take a little look into how Django works underneath the hood. The Django project describes itself as an MTV framework, using Models, Templates and Views. Let’s break down these components:
+
+    The model portion deals with data and databases, it can retrieve, store, and change data in a database.
+    The template determines how the data looks on a web page.
+    The view describes the data to be presented, and passes this information to the template.
+
+With the basics of the components explained let’s understand how they work together when we visit a Django website. When a request comes to a web server, it’s passed to Django to figure out what is requested. A client requests a URL, let’s use codecademy.com as an example, Django will take the web address and pass it to its urlresolver. Django will try to match the URL to a list of patterns, and if there is a match, then pass the request to the associated view function.
+
+Imagine a mail carrier delivering a letter. They walk down the street checking each house number until they find the exact one on the letter. Once they find the house, they deliver the letter. That’s how the urlresolver works!
+
+When we land on the right page, Django uses data from the model and feeds it into the view function to determine what data is shown. That data is given to the template and presented to us via the web page.
+
+This is a bit of a simplified version of what Django is doing underneath the hood, but a key takeaway is that Django follows this MTV pattern.
