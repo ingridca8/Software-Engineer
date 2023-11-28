@@ -42,8 +42,7 @@ For quotes
 > 
 > end of quote block
 
-    Quote block
-    another 
+    snypet block
     way to 
     do it 
     with TAB 
