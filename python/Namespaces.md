@@ -4,22 +4,22 @@ A namespace is a collection of currently defined symbolic names along with infor
 
 As Tim Peters suggests, namespaces aren’t just great. They’re honking great, and Python uses them extensively. In a Python program, there are four types of namespaces:
 
-    Built-In
-    Global
-    Enclosing
-    Local
+  +  Built-In
+   + Global
+  +  Enclosing
+ +   Local
 
 These have differing lifetimes. As Python executes a program, it creates namespaces as necessary and deletes them when they’re no longer needed. Typically, many namespaces will exist at any given time.
 ## Built in Namespaces
 The built-in namespace contains the names of all of Python’s built-in objects. These are available at all times when Python is running. You can list the objects in the built-in namespace with the following command:
 
- dir(__ builtins __)
+     dir(__ builtins __)
 
 Let’s note a few interesting facts about the objects hosted built-in namespace:
 
-    It contains many of the built-in functions we are able to use in our Python programs such as str(), zip(), slice(), sorted(), and many more.
-    It also hosts many of the exceptions that we may encounter in our programs such as 'ArithmeticError', 'IndexError', 'KeyError', and many more.
-    There are even constants like True and False
+ +   It contains many of the built-in functions we are able to use in our Python programs such as str(), zip(), slice(), sorted(), and many more.
+  +  It also hosts many of the exceptions that we may encounter in our programs such as 'ArithmeticError', 'IndexError', 'KeyError', and many more.
+  +  There are even constants like True and False
 
 ## Global Namespace
 The global namespace exists one level below the built-in namespace. Generally, it includes all non-nested names in the module (file) we are choosing to run the Python interpreter on. The global namespace is created when we run our main program and has a lifetime until the interpreter terminates (usually when our program is finished running).
@@ -39,22 +39,22 @@ There is just one more namespace we need to be aware of in our Python programs. 
 
 Enclosing namespaces are created specifically when we work with nested functions and just like with the local namespace, will only exist until the function is done executing.
 
-global_variable = 'global'
-
-def outer_function():
-  outer_value = "outer"
-
-  def inner_function():
-    inner_value = "inner"
-
- inner_function()
-
-outer_function()
+    global_variable = 'global'
+    
+    def outer_function():
+      outer_value = "outer"
+    
+      def inner_function():
+        inner_value = "inner"
+    
+     inner_function()
+    
+    outer_function()
 
 In this program, the following occurs:
 
-    We define a function called outer_function() and nest another function inside it called inner_function(). To generate a namespace, functions must be executed, so we are calling both of them.
-    Here, The outer_function() serves the role of an enclosing function while inner_function is an enclosed function. By creating this structure, we generate an enclosing namespace - a namespace created by an enclosing function and any number of enclosed functions inside it.
+ +   We define a function called outer_function() and nest another function inside it called inner_function(). To generate a namespace, functions must be executed, so we are calling both of them.
+  +  Here, The outer_function() serves the role of an enclosing function while inner_function is an enclosed function. By creating this structure, we generate an enclosing namespace - a namespace created by an enclosing function and any number of enclosed functions inside it.
 
 While Python doesn’t give us any particular function like enclosing() to visualize the namespace, we can use locals() to see when enclosed namespaces are generated.
 
