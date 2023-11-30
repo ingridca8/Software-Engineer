@@ -132,14 +132,14 @@ The example above shows an Animal class, its subclass Cat, and another standalon
 
 The code below shows that when working with different object types like, int, str or list, the + operator performs different functions. This is known as operator overloading and is another form of polymorphism.
 
-# For an int and an int, + returns an int
-2 + 4 == 6
+    # For an int and an int, + returns an int
+    2 + 4 == 6
 
-# For a string and a string, + returns a string
-"Is this " + "addition?" == "Is this addition?"
+    # For a string and a string, + returns a string
+    "Is this " + "addition?" == "Is this addition?"
 
-# For a list and a list, + returns a list
-[1, 2] + [3, 4] == [1, 2, 3, 4]
+    # For a list and a list, + returns a list
+    [1, 2] + [3, 4] == [1, 2, 3, 4]
 
 To implement this behavior, we must first discuss dunder methods. Every defined class in Python has access to a group of these special methods. We’ve explored a few already, the constructor __init__() and the string representation method __repr__(). The name dunder method is derived from the Double UNDERscores that surround the name of each method.
 
@@ -147,22 +147,22 @@ Recall that the __repr__() method takes only one parameter, self, and must retur
 
 Defining a class’s dunder methods is a way to perform operator overloading.
 
-class Animal:
-  def __init__(self, name):
-    self.name = name
-
-  def __repr__(self):
-    return self.name
-
-  def __add__(self, another_animal):
-    return Animal(self.name + another_animal.name)
-
-a1 = Animal("Horse")
-a2 = Animal("Penguin")
-a3 = a1 + a2
-print(a1) # Prints "Horse"
-print(a2) # Prints "Penguin"
-print(a3) # Prints "HorsePenguin"
+    class Animal:
+      def __init__(self, name):
+        self.name = name
+    
+      def __repr__(self):
+        return self.name
+    
+      def __add__(self, another_animal):
+        return Animal(self.name + another_animal.name)
+    
+    a1 = Animal("Horse")
+    a2 = Animal("Penguin")
+    a3 = a1 + a2
+    print(a1) # Prints "Horse"
+    print(a2) # Prints "Penguin"
+    print(a3) # Prints "HorsePenguin"
 
 The above code has the class Animal with a dunder method, .__add__(). This defines the + operator behavior when used on objects of this class type. The method returns a new Animal object with the names of the operand objects concatenated. In this example, we have created a "HorsePenguin"!
 
