@@ -167,3 +167,4 @@ print(a3) # Prints "HorsePenguin"
 The above code has the class Animal with a dunder method, .__add__(). This defines the + operator behavior when used on objects of this class type. The method returns a new Animal object with the names of the operand objects concatenated. In this example, we have created a "HorsePenguin"!
 
 The line of code a3 = a1 + a2 invokes the .__add__() method of the left operand, a1, with the right operand a2 passed as an argument. The name attributes of a1 and a2 are concatenated using the .__add__() parameters, self and another_animal. The resulting string is used as the name of a new Animal object which is returned to become the value of a3.
+
