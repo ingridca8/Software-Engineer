@@ -168,3 +168,125 @@ The above code has the class Animal with a dunder method, .__add__(). This defin
 
 The line of code a3 = a1 + a2 invokes the .__add__() method of the left operand, a1, with the right operand a2 passed as an argument. The name attributes of a1 and a2 are concatenated using the .__add__() parameters, self and another_animal. The resulting string is used as the name of a new Animal object which is returned to become the value of a3.
 
+# Abstraction
+Abstraction helps with the design of code by defining necessary behaviors to be implemented within a class structure. By doing so, abstraction also helps avoid leaving out or overlapping class functionality as class hierarchies get larger.
+
+    from abc import ABC, abstractmethod
+
+    class Animal(ABC):
+      def __init__(self, name):
+        self.name = name
+
+      @abstractmethod
+      def make_noise(self):
+        pass
+
+    class Cat(Animal):
+      def make_noise(self):
+        print("{} says, Meow!".format(self.name))
+
+    class Dog(Animal):
+      def make_noise(self):
+        print("{} says, Woof!".format(self.name))
+
+    kitty = Cat("Maisy")
+    doggy = Dog("Amber")
+    kitty.make_noise() # "Maisy says, Meow!"
+    doggy.make_noise() # "Amber says, Woof!"
+
+The below line of code would throw an error.
+
+    an_animal = Animal("Scruffy")
+    # TypeError: Can't instantiate abstract class Animal with abstract method make_noise
+
+The abstraction process defines what an Animal is but does not allow the creation of one. The .__init__() method still requires a name, since we feel all animals deserve a name.
+
+The .make_noise() method exists since all animals make some form of noise, but the method is not implemented since each animal makes a different noise. Each subclass of Animal is now required to define their own .make_noise() method or an error will occur.
+
+These are some of the ways abstraction supports the design of an organized class structure.
+
+# Encapsulation
+
+Encapsulation is the process of making methods and data hidden inside the object they relate to. Languages accomplish this with what are called access modifiers like:
+
+   + Public
+  +  Protected
+   + Private
+
+In general, public members can be accessed from anywhere, protected members can only be accessed from code within the same module and private members can only be accessed from code within the class that these members are defined.
+
+Python doesn’t have any inbuilt mechanism to prevent access from any member (i.e. all members are public in Python). However, there is a common convention amongst developers to use a single underscore **self._x** to indicate that a member is protected. Accessing a protected member outside of the module will not cause an error, it is added by developers to inform other developers that they should be careful when accessing this member in such a manner.
+
+Similarly, we can declare a member as private with two leading underscores **self.__x**. This is more than just a convention in Python because of a mechanism called *name mangling*. Members that are preceded with two underscores have their names modified in the background to **obj._Classname__x**. While they can still be publicly accessed, the purpose of this mechanism is to prevent clashing member names of any inheriting classes that might define a member of the same name.
+
+Note that this is different from the dunder methods we discussed earlier. A dunder method has two leading and two trailing underscores and is treated differently than a private member. One important difference is that dunder method names are no
+mangled.
+
+    class Employee():
+    def __init__(self):
+        self.id = None
+        # Write your code below
+        self._id = 7
+        self.__id = 8
+
+    e = Employee()
+    print(dir(e))
+
+## Getters, Setters and Deleters
+
+Using getter, setter, and deleter functions are one way to implement encapsulation within Python where the state of class attributes can be handled within the class. These functions are useful in making sure that the data being handled is appropriate for the defined class functionality.
+
+    class Animal:
+      def __init__(self, name):
+        self._name = name
+        self._age = None
+
+      def get_age(self):
+        return self._age
+
+      def set_age(self, new_age):
+        if isinstance(new_age, int):
+          self._age = new_age
+        else:
+          raise TypeError
+
+      def delete_age(self):
+        print("_age Deleted")
+        del self._age
+
+Looking at the Animal class above there is an _age attribute with a single underscore. This notates it is intended to be used only within the module. There are then 3 methods related to age each with a different purpose. These define the getter, setter, and deleter of the specific property.
+
+The first method related to age is a getter and returns self._age. The setter is implemented below that. It includes logic that ensures that the value passed to new_age is an integer. If so, self._age = new_age. If not, raise an error. This is useful and shows the power of using these functions for encapsulation.
+
+The deleter is implemented below the setter. It outputs a confirmation message and uses the del keyword to delete the self._age attribute.
+
+    a = Animal("Rufus")
+    print(a.get_age()) # None
+
+    a.set_age(10)
+    print(a.get_age()) # 10
+
+    a.set_age("Ten") # Raises a TypeError
+
+    a.delete_age() # "_age Deleted"
+    print(a.get_age()) # Raises a AttributeError
+
+Above we see a.get_age() gets the _age value, a.set_age(10) sets the value and a.delete_age() deletes the attribute entirely. A TypeError occurs with a.set_age("Ten") because the defined logic in the setter is looking only for an integer. An AttributeError occurs with a.get_age() after the attribute was deleted.
+
+# Review
+
+  +  Inheritance
+
+Python allows classes to inherit on multiple levels. Meaning a class can inherit from a base class as well as a derived class. Python also supports multiple inheritance, where one class can inherit from any number of other classes. This allows us to describe complex relationships between objects with minimal repeated code.
+
+ +   Polymorphism
+
+Polymorphism is a concept that allows functions and objects to behave in different ways depending on context. There is the polymorphism of functions like len() or the addition operator +, which can act differently depending on the provided data.
+
+  +  Abstraction
+
+Python supports the concept of abstraction by allowing objects with methods that have the same name, to be called in a general manner. Further, Python provides the Abstract Base Class (ABC) for us to create a more clearly defined interface.
+
+  +  Encapsulation
+
+Python’s approach to encapsulation is unique compared to most other object-oriented programming languages. In Python, all members of an object are publicly accessible but there are conventions to indicate to developers that a member is intended to be protected or private. 
