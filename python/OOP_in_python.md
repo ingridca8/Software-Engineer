@@ -209,9 +209,9 @@ These are some of the ways abstraction supports the design of an organized class
 
 Encapsulation is the process of making methods and data hidden inside the object they relate to. Languages accomplish this with what are called access modifiers like:
 
-   + Public
-  +  Protected
-   + Private
+   + Public 
+  +  Protected (one underscore *_name*)
+   + Private (two underscores *__name*)
 
 In general, public members can be accessed from anywhere, protected members can only be accessed from code within the same module and private members can only be accessed from code within the class that these members are defined.
 
