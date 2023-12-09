@@ -22,6 +22,22 @@ The general syntax looks like this:
 
     assert <condition>, 'Message if condition is not met'
 
-An assert statement is a quick and powerful way to verify that a program is in the correct state. They can be used to catch mistakes early and make sure we avoid any catastrophes. Let’s practice using assert to get a feel for automated testing!
+An assert statement is a quick and powerful way to verify that a program is in the correct state. They can be used to catch mistakes early and make sure we avoid any catastrophes.
 
-## 
+## Unit Testing
+
+Assertion statements are a good start to ensuring our programs are being tested, but they don’t necessarily tell us what we should test. Generally, we can start by testing the smallest unit of a program. 
+
+In programming, these types of individual tests are called unit tests. We can test a single unit of a program, such as a function, loop, or variable. A unit test validates a single behavior and will make sure all of the units of a program are functioning properly. 
+
+Let’s say we wanted to test a single function (a single unit). To test a single function, we might create several test cases. A test case validates that a specific set of inputs produces an expected output for the unit we are trying to test.
+
+      # The unit we want to test
+      def times_ten(number):
+          return number * 10
+
+      # A unit test function with a single test case
+      def test_multiply_ten_by_zero():
+          assert times_ten(0) == 0, 'Expected times_ten(0) to return 0'
+
+We can create as many test cases as we see fit for a single unit, and we should try to test all the unique types of inputs our unit will work with. 
