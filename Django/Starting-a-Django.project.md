@@ -182,7 +182,7 @@ We then pass the context as an argument in the render function. The full view.py
       template = loader.get_template("app/home.html")
       return HttpResponse(template.render(context))
 
-This would return a webpage that says “Hello, Junior” inside an <h1> tag.
+This would return a webpage that says “Hello, Junior” inside an < h1> tag.
 
 It’s quite common in Django to load templates, fill their context, and return an HttpResponse object with their rendered template. Django provides a shortcut for this pattern called the render() function! The render() function will do the work of loading the template and provide the contexts when they are passed as arguments.
 
