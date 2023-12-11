@@ -38,6 +38,28 @@ Authorization controls which users have access to which resources and actions. C
 
 When building a robust web application back-end, we need to incorporate both authentication (Who is this user? Are they who they claim to be?) and authorization (Who is allowed to do and see what?) into our server-side logic to make sure we’re creating secure, personalized, and dynamic content.
 
+##  Different Back-end Stacks
+
+Unlike the front-end, which must be built using HTML, CSS, and JavaScript, there’s a lot of flexibility in which technologies can be used in order to create the back-end of a web application. Developers can construct back-ends in many different languages like PHP, Java, JavaScript, Python, and more.
+
+You don’t need to reinvent the wheel to create a robust back-end. Instead, most developers make use of frameworks which are collections of tools that shape the organization of your back-end and provide efficient ways of accomplishing otherwise difficult tasks.
+
+There are numerous back-end frameworks from which developers can choose. Here are a few examples:
+
+| Framework |	Language |
+| --- | --- |
+| Laravel |	PHP |
+| Express.js |	JavaScript (runs in the Node environment) |
+| Ruby on Rails |	Ruby |
+| Spring |	Java |
+| JSF |	Java |
+| Flask |	Python |
+| Django |	Python |
+| ASP.NET |	C# |
+
+The collection of technologies used to create the front-end and back-end of a web application is referred to as a stack. This is where the term full-stack developer comes from; rather than working in either the front-end or the back-end exclusively, a full-stack developer works in both.
+
+For example, the MEAN stack is a technology stack for building web applications that uses MongoDB, Express.js, AngularJS, and Node.js: MongoDB is used as the database, Node.js with Express.js for the rest of the back-end, and Angular is used as a front-end framework. While the LAMP Stack, sometimes considered the archetypal stack, uses Linux, Apache, MySQL, and PHP.
 
 ## What is a Web Framework?
 
@@ -45,24 +67,24 @@ Let’s first establish what it means when we say Django is a web framework.
 
 Web frameworks are a type of software development tool that makes it easier and faster to develop web applications. They are a type of code library that provides code and patterns for database access, as well as templating systems for content. They promote code reuse, so we don’t have to write as much code to get a project running. Some features most web frameworks include are:
 
-    URL routing
-    Input form management and validation
-    Templating engines for HTML and CSS
-    Database configuration
-    Web security
-    Session repository and retrieval
+   + URL routing
+   + Input form management and validation
+   + Templating engines for HTML and CSS
+   + Database configuration
+   + Web security
+   + Session repository and retrieval
 
 Out of the box, Django comes with an admin panel, a user authentication system, a database, and something called object-relational mapper (ORM) that helps a web application interact with a database. These are some of the “batteries” included in Django to help build projects faster without having to worry about which tools to use.
 
-Later we’ll see how we can bootstrap a fully featured web application in only a handful of commands.
+
 
 ## How Django Works
 
 Before we create our first Django web app, let’s take a little look into how Django works underneath the hood. The Django project describes itself as an MTV framework, using Models, Templates and Views. Let’s break down these components:
 
-    The model portion deals with data and databases, it can retrieve, store, and change data in a database.
-    The template determines how the data looks on a web page.
-    The view describes the data to be presented, and passes this information to the template.
+   + The model portion deals with data and databases, it can retrieve, store, and change data in a database.
+   + The template determines how the data looks on a web page.
+   + The view describes the data to be presented, and passes this information to the template.
 
 With the basics of the components explained let’s understand how they work together when we visit a Django website. When a request comes to a web server, it’s passed to Django to figure out what is requested. A client requests a URL, let’s use codecademy.com as an example, Django will take the web address and pass it to its urlresolver. Django will try to match the URL to a list of patterns, and if there is a match, then pass the request to the associated view function.
 
