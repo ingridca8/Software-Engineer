@@ -10,3 +10,4 @@ In order to create templates, they have to be stored in the application in a fol
          |-- templates/
               |-- appname/
                   |-- first_template.html
+
