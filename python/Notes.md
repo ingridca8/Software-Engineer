@@ -26,3 +26,7 @@ If the type parameter is a tuple, this function will return True if the object i
 
     Check if "Hello" is one of the types described in the type parameter:
     x = isinstance("Hello", (float, int, str, list, dict, tuple)) 
+
+## in as keyword
+
+is used to check if something is **in** some text, chain of strings or a list
