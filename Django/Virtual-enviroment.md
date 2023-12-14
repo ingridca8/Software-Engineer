@@ -34,6 +34,9 @@ Enter your new directory which was automatically created.
 
     (project_venv) $ cd mysite
 
+
+[Documentation of virtual enviroments](https://virtualenv.pypa.io/en/latest/user_guide.html)
+
 And run the server.
 
     (project_venv) $ python manage.py runserver
