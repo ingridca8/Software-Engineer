@@ -32,11 +32,11 @@ class LinkedList:
     self.head_node = new_node
   
   def stringify_list(self):
-    stringify = str(self.head_node.get_value())
+    string_list = ''
     while self.head_node.get_next_node() != None:
-      stringify = stringify + '\n' + str(self.head_node.get_next_node().get_value())
+      string_list += str(self.head_node.get_value()) + ' '
       self.head_node = self.head_node.get_next_node()
-    return stringify
+    return string_list + str(self.head_node.get_value())
 
 # Test your code by uncommenting the statements below - did your list print to the terminal?
 ll = LinkedList(5)
