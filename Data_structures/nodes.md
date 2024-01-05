@@ -9,7 +9,17 @@ If you inadvertently remove the single link to a node, that node’s data and an
 ## Nodes in python
 The node’s data will be specified when creating the node and immutable (can’t be updated). The link will be optional at initialization and can be updated.
 
+## Notes
+A node has two elements: 
++ Data
++ "Next" node field (pointer)
 
+Data can not be modified once the node is created.
+
+Can have this methods:
++  Get data
++  Get next node
++  Set next node 
 
   
 
