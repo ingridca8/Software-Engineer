@@ -5,10 +5,10 @@ Since the nodes use links to denote the next node in the sequence, the nodes are
 
 Common operations on a linked list may include:
 
-    + adding nodes
-    + removing nodes
-    + finding a node
-    + traversing (or traveling through) the linked list
+ + adding nodes
+ + removing nodes
+ + finding a node
+ + traversing (or traveling through) the linked list
 
 Linked lists typically contain unidirectional links (next node), but some implementations make use of bidirectional links (next and previous nodes).
 
@@ -28,10 +28,10 @@ With the Node in hand, we can start building the actual linked list. Depending o
 
 For our use, we want to be able to:
 
-    get the head node of the list (it’s like peeking at the first item in line)
-    add a new node to the beginning of the list
-    print out the list values in order
-    remove a node that has a particular value
++    get the head node of the list (it’s like peeking at the first item in line)
+ +   add a new node to the beginning of the list
+  +  print out the list values in order
+   + remove a node that has a particular value
 
 
 
