@@ -14,6 +14,8 @@ In order to make manipulations in a stack, there are certain operations provided
 
 +    push() to insert an element into the stack
  +   pop() to remove an element from the stack
-  +  top() Returns the top element of the stack.
+  +  top() or peek() Returns the top element of the stack.
    + isEmpty() returns true if stack is empty else false.
    + size() returns the size of stack.
+
+We also need to consider the stack’s size and tweak our methods a bit so that our stack does not “overflow”. 
