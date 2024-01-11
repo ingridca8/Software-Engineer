@@ -18,4 +18,55 @@ In order to make manipulations in a stack, there are certain operations provided
    + isEmpty() returns true if stack is empty else false.
    + size() returns the size of stack.
 
-We also need to consider the stack’s size and tweak our methods a bit so that our stack does not “overflow”. 
+We also need to consider the stack’s size and tweak our methods a bit so that our stack does not “overflow”. If we’re not careful, we can accidentally over-fill them with data. Since we don’t want any stack overflow, we need to go back and make a few modifications to our methods that help us track and limit the stack size so we can keep our stacks healthy.
+
+What do we do if someone tries to peek() or pop() when our stack is empty?
+
+How do we keep someone from push()ing to a stack that has already reached its limit?
+
+How do we even know how large our stack has gotten?
+
+      from node import Node
+
+      class Stack:
+        def __init__(self, limit=1000):
+          self.top_item = None
+          self.size = 0
+          self.limit = limit
+  
+        def push(self, value):
+          if self.has_space():
+            item = Node(value)
+            item.set_next_node(self.top_item)
+            self.top_item = item
+            self.size += 1
+          else:
+            print("All out of space!")
+
+        def pop(self):
+          if not self.is_empty():
+            item_to_remove = self.top_item
+            self.top_item = item_to_remove.get_next_node()
+            self.size -= 1
+            return item_to_remove.get_value()
+          else:
+            print("This stack is totally empty.")
+  
+        def peek(self):
+          if not self.is_empty():
+	          return self.top_item.get_value()
+          else:
+            print("Nothing to see here!")
+      
+        def has_space(self):
+          if self.limit > self.size:
+            return True
+          else:
+            return False
+      
+        def is_empty(self):
+          if self.size == 0:
+            return True
+          else:
+            return False
+
